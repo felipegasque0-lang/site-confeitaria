@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sekuya&display=swap');
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f0d6bf;
+    color: #5c514a;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #E68971;
+    margin-bottom: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+legend {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    color: #b96850;
+}
+
+fieldset {
+    width: 45%;
+    font-size: 20px;
+    border: 2px solid #E68971;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(139, 94, 60, 0.12);
+}
+
+div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    width: 35%;
+    text-align: right;
+    margin-right: 10px;
+    color: #5c514a;
+}
+
+input {
+    width: 60%;
+    padding: 9px;
+}
+
+label,
+input,
+select,
+textarea {
+    font-size: 16px;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid #e4c9b9;
+    border-radius: 7px;
+    background-color: #fffaf6;
+    font-family: "Open Sans", sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #E68971;
+    border-color: #E68971;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #E68971;
+    cursor: pointer;
+}
+
+.botoes {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button[type="reset"] {
+    background-color: #f8dfd8;
+    color: #a64e3b;
+}
+
+button[type="reset"]:hover {
+    background-color: #f1c8bd;
+}
+
+button[type="submit"] {
+    background-color: #E68971;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #cf7058;
+}

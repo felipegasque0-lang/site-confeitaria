@@ -1,1 +1,177 @@
-www
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/contato.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caacupe+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sekuya&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="div-logo">
+            <img class="logotipo" src="../img/logo.png" alt="logotipo da confeitaria">
+        </div>
+        <div class="div-menu">
+            <h1>
+                Confeitaria do Gasque
+            </h1>
+
+            <br />
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="../pages/sobre.html">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="../pages/cardapio.html">Cardápio</a>
+                    </li>
+                    <li>
+                        <a href="../pages/contato.html">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="div-logo"></div>
+    </header>
+
+    <h1>Formulário de Cadastro </h1>
+
+    <form onsubmit="cadastrar(event)">
+        <div class="container">
+
+            <fieldset>
+                <legend>Informações pessoais</legend>
+
+                <div>
+                    <label>nome:</label>
+                    <input type="text" required>
+                </div>
+
+
+                <div>
+                    <label>Telenofe:</label>
+                    <input type="tel" required>
+                </div>
+
+                <div>
+                    <label>Whatsapp</label>
+                    <input type="checkbox" class="chechbox">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações do pedidos</legend>
+
+
+                <div>
+                    <label>Item:</label>
+                    <select id="item" onchange="calcularTotal()" required>
+                        <option value="">---Selecione---</option>
+                        <option value="chocolate">Bolo de Chocolate - R$: 45.00</option>
+                        <option value="morango">Bolo de Morango - R$: 50.00 </option>
+                        <option value="laranja">Bolo de Laranja - R$: 35.00</option>
+                        <option value="cenoura">Bolo de Cenoura - R$: 35.00</option>
+                        <option value="abacaxi">Bolo de Abacaxi - R$: 45.00</option>
+                        <option value="cereja">Bolo de Cereja - R$: 55.00</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Quantidade:</label>
+                    <input id="quantidade" type="number" min="1" value="1" oninput="calcularTotal()">
+                </div>
+
+                <div>
+                    <label>Total:</label>
+                    <input id="total" type="text" readonly value="R$ 0,00" required>
+                </div>
+
+                <div>
+                    <label>Forma de pagamento:</label>
+                    <select id="pagamento" onchange="mostrarPix()">
+                        <option value="">---Selecione---</option>
+                        <option value="pix">PIX</option>
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="cartao">Cartão</option>
+                    </select>
+                </div>
+
+                <div id="area-pix" style="display: none;">
+                    <p>Escaneie o QR Code PIX para pagar:</p>
+
+                    <img src="../img/pix.png" alt="QR Code para pagamento via PIX" width="200">
+                </div>
+
+        </div>
+
+        <div class="container">
+            <fieldset>
+                <legend>Dados do Endereço</legend>
+
+                <div>
+                    <label>CEP:</label>
+                    <input onkeydown="buscar(event)" id="cep" type="text"
+                        placeholder="Digite e Aperte Enter para Buscar" required>
+                </div>
+
+                <div>
+                    <label>Logradouro:</label>
+                    <input id="logradouro" type="text" required>
+                </div>
+
+                <div>
+                    <label>Número:</label>
+                    <input id="numero" type="number" required>
+                </div>
+
+                <div>
+                    <label>Bairro:</label>
+                    <input id="bairro" type="text" required>
+                </div>
+
+                <div>
+                    <label>Cidade:</label>
+                    <input id="cidade" type="text" required>
+                </div>
+
+                <div>
+                    <label>Estado:</label>
+                    <input id="estado" type="text" required>
+                </div>
+
+                <div>
+                    <label>UF:</label>
+                    <input id="uf" type="text" required>
+                </div>
+
+            </fieldset>
+
+            <div class="container botoes">
+                <button type="submit">Finalizar pedido</button>
+                <button type="reset">Limpar tudo</button>
+
+            </div>
+
+    </form>
+</body>
+
+<script src="../js/contato.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</html>
